@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const db = require('./db');
 // const dotenv = require('dotenv');
-const port = 6000;
+const port = 5007;
 const contactAuthController = require('./controller/contactAuthController');
 
 app.use(cors());
