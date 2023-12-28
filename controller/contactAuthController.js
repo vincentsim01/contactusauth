@@ -2,25 +2,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const User = require('../model/contactUserSchema');
+const Contact = require('../model/contactUserSchema');
 const router = express.Router();
 
 router.use(bodyParser.urlencoded({extended:true}));
 router.use(bodyParser.json());
 
 
-router.post('/SubmitContact',(req,res) => {
+router.post('/Contactform',(req,res) => {
 
-    User.create({
+    Contact.create({
         name:req.body.name,
         email:req.body.email,
         phone:req.body.phone,
         message:req.body.message
     })
-    .then(function (users) {
-        res.send(users);
+    .then(function (Contacts) {
+        res.send(Contacts);
 
-        console.log(users);
+
         });
 })
 
